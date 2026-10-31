@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>¡Volteala!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="app">
+  <header class="hud">
+    <div class="chip"><span class="lbl">Puntos</span><span class="val" id="score">0</span></div>
+    <div class="chip" id="streakChip"><span class="lbl">Racha</span><span class="val" id="streak">0</span></div>
+    <div class="chip" id="livesChip"><span class="lbl">Vidas</span><span class="lives" id="lives" aria-label="3 vidas"></span></div>
+  </header>
+
+  <main class="stage" id="stage">
+    <canvas id="game" aria-label="Comal con pupusas"></canvas>
+    <div class="overlay" id="overlay">
+      <section class="panel compact" id="ovMenu">
+        <h1 class="logo">¡Volteala!</h1>
+        <p class="lead"><span class="ring-demo" aria-hidden="true"></span><span>Tocá cada pupusa cuando el anillo llegue al <b>verde</b>.</span></p>
+        <button class="btn big" id="playBtn" type="button">Jugar</button>
+        <p class="keys">Tu récord: <b id="bestTxt">0</b> · En la compu, teclas 1 a 4</p>
+      </section>
+
+      <section class="panel" id="ovPause" hidden>
+        <h2 class="title">Pausa</h2>
+        <button class="btn big" id="resumeBtn" type="button">Seguir</button>
+        <button class="btn ghost" id="quitBtn" type="button">Salir al menú</button>
+      </section>
+
+      <section class="panel" id="ovOver" hidden>
+        <h2 class="title">¡Se quemaron 3!</h2>
+        <p class="newbest" id="newBest" hidden>¡Récord nuevo!</p>
+        <div class="final"><span class="lbl">Puntos</span><span class="big-num" id="finalScore">0</span></div>
+        <dl class="stats">
+          <div class="st-good"><dt>🟩 Perfectas</dt><dd id="stPerf">0</dd></div>
+          <div><dt>🟨 Buenas</dt><dd id="stOk">0</dd></div>
+          <div><dt>⬜ Crudas</dt><dd id="stRaw">0</dd></div>
+          <div class="st-bad"><dt>🟥 Quemadas</dt><dd id="stBurnt">0</dd></div>
+          <div><dt>Mejor racha</dt><dd id="stStreak">0</dd></div>
+          <div><dt>Nivel</dt><dd id="stLevel">1</dd></div>
+        </dl>
+        <button class="btn big" id="againBtn" type="button">Otra vez</button>
+        <button class="btn ghost" id="menuBtn" type="button">Menú</button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bar">
+    <button class="btn icon" id="pauseBtn" type="button" aria-label="Pausa">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1.5" fill="currentColor"/><rect x="14" y="4" width="5" height="16" rx="1.5" fill="currentColor"/></svg>
+    </button>
+    <div class="pill" id="modePill">¡Volteala!</div>
+    <button class="btn icon" id="soundBtn" type="button" aria-label="Sonido" aria-pressed="true"></button>
+  </footer>
+</div>
+
+<!-- El orden importa: cada archivo usa lo que definen los anteriores -->
+<script src="js/config.js"></script>
+<script src="js/sonido.js"></script>
+<script src="js/dibujo.js"></script>
+<script src="js/juego.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
