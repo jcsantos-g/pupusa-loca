@@ -2,7 +2,9 @@
 
 **Actividad individual:** Vibecoding guiado – Semana 2  
 **IA utilizada:** Claude (Claude Code, aplicación de escritorio).  
-**Proyecto:** Desarrollo de un minijuego 2D inspirado en la gastronomía salvadoreña.
+**Proyecto:** Desarrollo de un minijuego 2D inspirado en la gastronomía salvadoreña.  
+**Jugar en línea:** https://jcsantos-g.github.io/pupusa-loca/  
+**Repositorio:** https://github.com/jcsantos-g/pupusa-loca
 
 ---
 
